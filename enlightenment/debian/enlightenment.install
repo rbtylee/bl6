@@ -1,0 +1,17 @@
+etc/enlightenment/sysactions.conf
+etc/enlightenment/system.conf
+usr/bin/enlightenment
+usr/bin/enlightenment_askpass
+usr/bin/enlightenment_filemanager
+usr/bin/enlightenment_imc
+usr/bin/enlightenment_open
+usr/bin/enlightenment_remote
+usr/bin/enlightenment_start
+usr/bin/emixer
+usr/lib/*/enlightenment/modules/*
+usr/lib/*/enlightenment/utils/enlightenment_*
+usr/share/applications/enlightenment_filemanager.desktop
+usr/share/applications/emixer.desktop
+usr/share/applications/enlightenment_askpass.desktop
+usr/lib/*/enlightenment/gadgets/*/loader.so
+usr/lib/systemd/user

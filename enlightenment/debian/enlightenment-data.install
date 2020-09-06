@@ -1,0 +1,13 @@
+etc/xdg/menus/e-applications.menu
+usr/share/enlightenment/data
+usr/share/locale
+usr/share/xsessions
+usr/share/wayland-sessions
+usr/share/enlightenment/doc/documentation.html usr/share/doc/enlightenment/html
+usr/share/enlightenment/doc/enlightenment.png usr/share/doc/enlightenment/html
+usr/share/enlightenment/doc/illume2.png usr/share/doc/enlightenment/html
+usr/share/enlightenment/doc/illume2.html usr/share/doc/enlightenment/html
+usr/share/enlightenment/doc/*.txt.gz usr/share/doc/enlightenment
+usr/share/icons
+usr/share/pixmaps/enlightenment-askpass.png
+usr/share/enlightenment/AUTHORS

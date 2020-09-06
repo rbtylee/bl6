@@ -1,0 +1,1 @@
+mv_conffile /etc/xdg/menus/enlightenment-applications.menu /etc/xdg/menus/e-applications.menu 0.21.2-2~ enlightenment-data

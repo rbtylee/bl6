@@ -1,0 +1,2 @@
+# upstream distributes this, it can be included in the E headers
+enlightenment-dev: package-name-defined-in-config-h usr/include/enlightenment/config.h

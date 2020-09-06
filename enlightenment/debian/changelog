@@ -1,0 +1,5 @@
+enlightenment (1.24.3-0focal0) focal; urgency=low
+
+  * First packaging for Bodhi linux 6.x
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Tue, 25 Aug 2020 17:50:35 +0400

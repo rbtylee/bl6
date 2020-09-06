@@ -1,0 +1,95 @@
+Source: enlightenment
+Section: x11
+Priority: optional
+Maintainer: Robert Wiley <ylee@bodhilinux.com>
+Build-Conflicts: systemctl
+Build-Depends:
+ bluez [linux-any],
+ connman-dev,
+ debhelper,
+ imagemagick,
+ libasound2-dev,
+ libbluetooth-dev,
+ libefl-dev(>= 1.24.3),
+ libpam0g-dev,
+ libxcb-keysyms1-dev,
+ libxcb-shape0-dev,
+ libxext-dev,
+ libxkbcommon-x11-dev,
+ meson,
+ rfkill,
+ systemd,
+ uuid-dev,
+ wayland-protocols,
+ xwayland,
+Build-Depends-Indep: doxygen
+Standards-Version: 4.5.0
+Homepage: https://www.enlightenment.org
+Rules-Requires-Root: no
+
+Package: enlightenment
+Architecture: any
+Depends:
+ default-dbus-session-bus | dbus-session-bus,
+ enlightenment-data (= ${source:Version}),
+ libefl,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ acpid,
+ bc,
+ bluez,
+ packagekit,
+ terminology | x-terminal-emulator,
+ udisks2,
+Suggests: gdb, x-display-manager
+Provides: x-window-manager
+Description: X11 window manager based on EFL
+ Enlightenment is an advanced window manager for X11. Unique
+ features include: a fully animated background, nice drop shadows
+ around windows, backed by an extremely clean and optimized
+ foundation of APIs.
+ .
+ This package contains the core files for Enlightenment.
+
+Package: enlightenment-data
+Architecture: all
+Depends: ${misc:Depends}
+Enhances: enlightenment
+Conflicts: enlightenment-data
+Description: X11 window manager based on EFL - run time data files
+ Enlightenment is an advanced window manager for X11. Unique
+ features include: a fully animated background, nice drop shadows
+ around windows, backed by an extremely clean and optimized
+ foundation of APIs.
+ .
+ These are the architecture independent runtime support files for the
+ Enlightenment Window Manager.
+
+Package: enlightenment-dev
+Architecture: any
+Section: devel
+Depends:
+ enlightenment (= ${binary:Version}),
+ libefl-dev (>= 1.24.3),
+ ${misc:Depends},
+Description: Enlightenment headers, static libraries and documentation
+ Enlightenment is an advanced window manager for X11. Unique
+ features include: a fully animated background, nice drop shadows
+ around windows, backed by an extremely clean and optimized
+ foundation of APIs.
+ .
+ This package contains headers, static libraries and documentation for
+ enlightenment.
+
+Package: enlightenment-dbg
+Architecture: any
+Section: debug
+Depends: ${misc:Depends}, enlightenment (= ${binary:Version})
+Priority: optional
+Description: Enlightenment - debugging symbols
+ Enlightenment is an advanced window manager for X11. This package 
+ contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat
+ easier to interpret core dumps. The libraries are installed in
+ /usr/lib/debug and are automatically used by gdb.

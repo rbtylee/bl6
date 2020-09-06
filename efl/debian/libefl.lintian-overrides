@@ -1,0 +1,3 @@
+libefl: package-name-doesnt-match-sonames
+libefl: dev-pkg-without-shlib-symlink
+

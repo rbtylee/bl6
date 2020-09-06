@@ -1,0 +1,18 @@
+enlightenment: binary-without-manpage
+
+# setuid helers for system actions
+enlightenment: setuid-binary usr/lib/x86_64-linux-gnu/enlightenment/utils/enlightenment_sys 4755 root/root
+enlightenment: setuid-binary usr/lib/x86_64-linux-gnu/enlightenment/utils/enlightenment_ckpasswd 4755 root/root
+enlightenment: setuid-binary usr/lib/x86_64-linux-gnu/enlightenment/utils/enlightenment_system 4755 root/root
+
+# vkbd loads its images from here
+enlightenment: image-file-in-usr-lib usr/lib/x86_64-linux-gnu/enlightenment/modules/vkbd/keyboards/*.png
+
+# this module only uses enlightenment symbols, there's no more linking to add
+enlightenment: shared-library-lacks-prerequisites usr/lib/x86_64-linux-gnu/enlightenment/modules/wizard/linux-gnu-x86_64-0.24.2/page_200.so
+enlightenment: shared-lib-without-dependency-information usr/lib/x86_64-linux-gnu/enlightenment/modules/wizard/linux-gnu-x86_64-0.24.2/page_200.so
+
+# the copying bits do not agree with included docs or the links from
+# commit f66ef7077
+enlightenment: truetype-font-prohibits-installable-embedding [edit only] usr/lib/x86_64-linux-gnu/enlightenment/modules/shot/Yantiq.ttf
+enlightenment: truetype-font-prohibits-installable-embedding [preview/print only] usr/lib/x86_64-linux-gnu/enlightenment/modules/shot/Puk-Regular.ttf
