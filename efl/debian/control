@@ -5,6 +5,7 @@ Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
 Build-Conflicts: systemctl
 Build-Depends:
  debhelper,
+ doxygen,
  libblkid-dev [linux-any],
  libssl-dev,
  libcurl4-openssl-dev,
@@ -60,7 +61,6 @@ Build-Depends:
  libxi-dev,
  libxinerama-dev,
  libxkbcommon-x11-dev,
- libxpresent-dev,
  libxpm-dev,
  libxrandr-dev,
  libxrender-dev,
@@ -117,7 +117,6 @@ Depends:
  libxcursor-dev,
  libxdamage-dev,
  libxext-dev,
- libxpresent-dev,
  libxi-dev,
  libxinerama-dev,
  libxml2-dev,
