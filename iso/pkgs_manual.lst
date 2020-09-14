@@ -198,7 +198,6 @@ ncurses-bin
 network-manager-gnome
 ntfs-3g
 openssh-client
-openssh-server
 os-prober
 p11-kit
 p11-kit-modules

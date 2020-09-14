@@ -115,7 +115,6 @@ gvfs-fuse
 gvfs-libs
 hicolor-icon-theme
 humanity-icon-theme
-hunspell-en-us
 init-system-helpers
 install-info
 intel-microcode
@@ -784,7 +783,6 @@ nettle-dev
 network-manager
 network-manager-pptp
 networkd-dispatcher
-openssh-sftp-server
 openssl
 packagekit
 packagekit-tools
@@ -878,7 +876,6 @@ sensible-utils
 sgml-base
 shared-mime-info
 sound-theme-freedesktop
-ssh-import-id
 sudo
 syslinux-common
 systemd-sysv
