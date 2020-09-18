@@ -20,8 +20,6 @@ bash
 bind9-dnsutils
 bind9-host
 bind9-libs
-bodhi-plymouth-text
-bodhi-plymouth-theme
 bsdmainutils
 bsdutils
 busybox-initramfs
