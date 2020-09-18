@@ -61,9 +61,6 @@ e2fsprogs
 ed
 eject
 emacsen-common
-enlightenment-data
-enlightenment
-ephoto-bl
 fdisk
 file
 findutils
@@ -190,9 +187,6 @@ libdrm2
 libedit2
 libefiboot1
 libefivar1
-libefl-bin
-libefl-data
-libefl
 libegl-mesa0
 libegl1
 libelf1
@@ -534,6 +528,7 @@ pci.ids
 pciutils
 perl-base
 plymouth-label
+plymouth-theme-spinner
 plymouth-theme-ubuntu-text
 plymouth
 policykit-1-gnome
@@ -606,12 +601,9 @@ tasksel-data
 tasksel
 tcpdump
 telnet
-terminology-data
-terminology
 time
 ttf-unifont
 tzdata
-ubiquity-slideshow-bodhi2
 ubuntu-advantage-tools
 ubuntu-keyring
 ubuntu-minimal
