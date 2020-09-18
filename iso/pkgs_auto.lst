@@ -67,9 +67,7 @@ gcc-10-base
 gcc-9
 gcc-9-base
 gcr
-gdebi-core
 gdisk
-geany-common
 gettext-base
 gir1.2-atk-1.0
 gir1.2-freedesktop
@@ -131,7 +129,6 @@ keyboard-configuration
 kmod
 kpartx
 krb5-locales
-language-pack-gnome-en-base
 less
 libaa1
 libaccountsservice0

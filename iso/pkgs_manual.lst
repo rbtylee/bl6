@@ -15,8 +15,6 @@ bash
 bash-completion
 bind9-dnsutils
 bluez
-bodhi-plymouth-text
-bodhi-plymouth-theme
 btrfs-progs
 build-essential
 busybox-initramfs
@@ -48,10 +46,6 @@ dpkg-dev
 ecrire
 ed
 eject
-enlightenment
-enlightenment-data
-ephoto-bl
-evisum
 file
 finalrd
 findutils
@@ -66,8 +60,6 @@ friendly-recovery
 ftp
 fwupd
 fwupd-signed
-gdebi
-geany
 genisoimage
 geoip-database
 gettext
@@ -109,7 +101,6 @@ klibc-utils
 kpartx-boot
 language-pack-en
 language-pack-en-base
-language-pack-gnome-en
 language-selector-common
 laptop-detect
 libaio1
@@ -128,9 +119,6 @@ libdevmapper-event1.02.1
 libdmraid1.0.0.rc16
 libdrm-dev
 libdv4
-libefl
-libefl-bin
-libefl-data
 libegl1-mesa
 libevent-2.1-7
 libexpat1-dev
@@ -197,7 +185,6 @@ ncurses-base
 ncurses-bin
 network-manager-gnome
 ntfs-3g
-openssh-client
 os-prober
 p11-kit
 p11-kit-modules
@@ -208,7 +195,6 @@ pcmanfm
 pinentry-curses
 pkg-config
 plymouth
-plymouth-theme-ubuntu-text
 plymouth-x11
 policykit-1-gnome
 policykit-desktop-privileges
@@ -237,8 +223,6 @@ syslinux-utils
 systemd
 tcpdump
 telnet
-terminology
-terminology-data
 thin-provisioning-tools
 time
 ttf-bitstream-vera
@@ -247,7 +231,6 @@ ttf-unifont
 ubiquity-casper
 ubiquity-frontend-debconf
 ubiquity-frontend-gtk
-ubiquity-slideshow-ubuntu
 ubiquity-ubuntu-artwork
 ubuntu-drivers-common
 ubuntu-minimal
@@ -263,7 +246,6 @@ uuid-runtime
 wayland-protocols
 wbritish
 wget
-wolflandbuilder
 xfsprogs
 xorriso
 xserver-xorg
