@@ -1,0 +1,3 @@
+bodhi@bodhi-virtualbox:~/Code/Bodhi$ lintian *.deb
+W: terminology-data: manpage-has-errors-from-man usr/share/man/man1/terminology.1.gz 580: warning [p 7, 11.3i]: cannot adjust line
+W: terminology-data: script-not-executable usr/libexec/terminology/tests/utils.sh
