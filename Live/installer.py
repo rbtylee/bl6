@@ -20,7 +20,7 @@ class InstallerEngine:
         self.setup = setup
 
         # Flush print when it's called
-        sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
+        # sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
 
         # find the squashfs..
         self.media = '/run/live/medium/live/filesystem.squashfs'
