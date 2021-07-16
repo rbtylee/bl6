@@ -926,6 +926,8 @@ class InstallerWindow:
 
                 # Check for root partition
                 found_root_partition = False
+                print("FFFUUUUCCCKKK")
+                print(self.setup.partitions)
                 for partition in self.setup.partitions:
                     if(partition.mount_as == "/"):
                         found_root_partition = True

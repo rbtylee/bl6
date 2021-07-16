@@ -1,2 +1,14 @@
 sudo apt install python3-parted python3-gi-cairo python3-pyqt5 python3-pil
 
+https://github.com/paledega/live-installer
+https://github.com/linuxmint/live-installer
+
+
+The following NEW packages will be installed:
+  libdouble-conversion3 libimagequant0 libmd4c0 libpcre2-16-0 libqt5core5a
+  libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5
+  libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5
+  libqt5widgets5 libqt5xml5 libxcb-icccm4 libxcb-image0 libxcb-render-util0
+  libxcb-xinerama0 libxcb-xinput0 python3-olefile python3-parted python3-pil
+  python3-pyqt5 python3-pyqt5.sip qt5-gtk-platformtheme qttranslations5-l10n
+

@@ -394,6 +394,7 @@ class InstallerEngine:
                 self.do_mount(partition.path, "/target" + partition.mount_as, fs, None)
 
     def get_blkid(self, path):
+        print("FFUUUUUCCCK")
         uuid = path # If we can't find the UUID we use the path
         blkid = subprocess.getoutput('blkid').split('\n')
         for blkid_line in blkid:

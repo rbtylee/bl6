@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # coding: utf-8
 #
 # from __future__ import division
@@ -38,7 +38,7 @@ def getoutput(command):
  IDX_PART_SIZE,
  IDX_PART_FREE_SPACE,
  IDX_PART_OBJECT,
- IDX_PART_DISK) = range(9)
+ IDX_PART_DISK) = list(range(9))
 
 def is_efi_supported():
     # Are we running under with efi ?
@@ -77,8 +77,7 @@ def get_disks():
     for line in lsblk.stdout:
         print("----> %s" % line)
         try:
-            line=str(line)
-            elements = line.strip().split(" ")
+            elements = str(line).strip().split(" ")
             if len(elements) < 4:
                 print("Can't parse blkid output: %s" % elements)
                 continue
@@ -88,7 +87,8 @@ def get_disks():
             else:
                 type, device, removable, size, model = elements
             device = "/dev/" + device
-            if str(type) == b"disk" and device not in exclude_devices:
+            print(str(type))
+            if str(type) == "b'disk" and device not in exclude_devices:
                 # convert size to manufacturer's size for show, e.g. in GB, not GiB!
                 unit_index = 'BKMGTPEZY'.index(size.upper()[-1])
                 l10n_unit = [_('B'), _('kB'), _('MB'), _('GB'), _('TB'), 'PB', 'EB', 'ZB', 'YB'][unit_index]
@@ -100,6 +100,8 @@ def get_disks():
                 disks.append((device, description))
         except Exception as detail:
             print("FUCK: Could not parse blkid output: %s (%s)" % (line, detail))
+    print("***********************************************")
+    print(disks)
     return disks
 
 def build_partitions(_installer):
@@ -124,7 +126,7 @@ def build_partitions(_installer):
 def update_html_preview(selection):
     model, row = selection.get_selected()
     try: disk = model[row][IDX_PART_DISK]
-    except (TypeError, IndexError): return  # no disk is selected or no disk available
+    except TypeError as IndexError: return  # no disk is selected or no disk available
     if disk != installer._selected_disk:
         installer._selected_disk = disk
         installer.partitions_browser.load_html(model.get_html(disk), 'file:///')
@@ -209,7 +211,8 @@ def build_grub_partitions():
     try: preferred = [p.partition.disk.device.path for p in installer.setup.partitions if p.mount_as == '/'][0]
     except IndexError: preferred = ''
     devices = sorted(list(d[0] for d in installer.setup.partition_setup.disks) +
-                     list(filter(None, (p.name for p in installer.setup.partitions))),
+                     #list(filter(None, (p.name for p in installer.setup.partitions))),
+                     list([_f for _f in (p.name for p in installer.setup.partitions) if _f]),
                      key=lambda path: path != preferred)
     for p in devices: grub_model.append([p])
     installer.builder.get_object("combobox_grub").set_model(grub_model)
@@ -566,7 +569,7 @@ class PartitionDialog(object):
         filesystems = ['', 'swap']
         for path in ["/bin", "/sbin"]:
             for fs in getoutput('echo %s/mkfs.*' % path).split():
-                filesystems.append(fs.split("mkfs.")[1])
+                filesystems.append(str(fs).split("mkfs.")[1].replace("'",""))
         filesystems = sorted(filesystems)
         filesystems = sorted(filesystems, key=lambda x: 0 if x in ('', 'ext4') else 1 if x == 'swap' else 2)
         model = Gtk.ListStore(str)
